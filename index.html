@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Biotechnology Lab | Dr. Sher Hayat Khan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/logo.png" alt="Lab Logo" class="nav-logo" onerror="this.style.display='none'">
+                <div class="nav-brand-text">
+                    <span class="nav-lab-name">Animal Biotechnology Lab</span>
+                    <span class="nav-pi-name">Dr. Sher Hayat Khan</span>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">People <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/key-personnel.html">Key Personnel</a></li>
+                        <li><a href="pages/members.html">All Members</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Research <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/research-ongoing.html">Ongoing Research</a></li>
+                        <li><a href="pages/research-completed.html">Completed Research</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/publications.html">Publications</a></li>
+                <li class="dropdown">
+                    <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/inventory.html">Inventory</a></li>
+                        <li><a href="pages/protocols.html">Protocols</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/gallery.html">Gallery</a></li>
+                <li><a href="pages/news.html">News</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-search">
+                <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search publications, people, research...">
+            <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">University of Agriculture Peshawar, Pakistan</div>
+            <h1 class="hero-title">Animal Biotechnology Laboratory</h1>
+            <p class="hero-subtitle">Pioneering research in molecular genetics, reproductive biotechnology, and genetic engineering of livestock</p>
+            <div class="hero-pi">
+                <img src="images/pi-placeholder.jpg" alt="Dr. Sher Hayat Khan" class="hero-pi-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23334155%22 width=%22100%22 height=%22100%22 rx=%2250%22/><text x=%2250%22 y=%2255%22 fill=%22white%22 text-anchor=%22middle%22 font-size=%2230%22>SK</text></svg>'">
+                <div class="hero-pi-info">
+                    <h3>Dr. Sher Hayat Khan</h3>
+                    <p>Principal Investigator & Associate Professor</p>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="pages/research-ongoing.html" class="btn btn-primary">Our Research</a>
+                <a href="pages/contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">Advancing Animal Science Through Innovation</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-lead">The Animal Biotechnology Laboratory at the University of Agriculture Peshawar leads cutting-edge research in molecular genetics, reproductive biotechnology, and genetic improvement of livestock.</p>
+                    <p>Our multidisciplinary team combines molecular biology, genomics, and reproductive technologies to address critical challenges in animal agriculture and conservation.</p>
+                    <div class="about-features">
+                        <div class="feature-card">
+                            <i class="fas fa-dna"></i>
+                            <h4>Molecular Genetics</h4>
+                            <p>Gene identification, characterization, and utilization for genetic improvement</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-flask"></i>
+                            <h4>Reproductive Biotechnology</h4>
+                            <p>Advanced techniques in embryo transfer, IVF, and cryopreservation</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-gene"></i>
+                            <h4>Genetic Engineering</h4>
+                            <p>Developing transgenic animals for research and agricultural applications</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-label">Active Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Publications</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="12">0</span>
+                        <span class="stat-label">Team Members</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="8">0</span>
+                        <span class="stat-label">Years of Research</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Highlights -->
+    <section class="section research-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Research</span>
+                <h2 class="section-title">Our Research Focus</h2>
+            </div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-horse"></i>
+                    </div>
+                    <h3>Livestock Genetic Improvement</h3>
+                    <p>Identifying and utilizing genetic markers for productive traits in cattle, sheep, and goats native to Pakistan.</p>
+                    <a href="pages/research-ongoing.html" class="research-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>Embryo Biotechnology</h3>
+                    <p>Developing efficient embryo production, preservation, and transfer protocols for endangered and productive breeds.</p>
+                    <a href="pages/research-ongoing.html" class="research-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3>Disease Resistance</h3>
+                    <p>Molecular mechanisms of disease resistance and development of diagnostic markers for major livestock diseases.</p>
+                    <a href="pages/research-ongoing.html" class="research-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Conservation Genetics</h3>
+                    <p>Genetic characterization and conservation of indigenous livestock breeds and wildlife species.</p>
+                    <a href="pages/research-ongoing.html" class="research-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Publications -->
+    <section class="section publications-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Publications</span>
+                <h2 class="section-title">Recent Publications</h2>
+                <a href="pages/publications.html" class="section-link">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <span class="pub-year">2024</span>
+                    <div class="pub-content">
+                        <h4>Molecular characterization of heat shock protein genes in indigenous cattle breeds</h4>
+                        <p class="pub-authors">Khan SS, Ali S, Ahmad F, <strong>Khan SH</strong></p>
+                        <p class="pub-journal">Journal of Animal Science and Biotechnology</p>
+                        <a href="#" class="pub-link">Read More <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <span class="pub-year">2024</span>
+                    <div class="pub-content">
+                        <h4>Optimized protocol for in vitro embryo production in Nili-Ravi buffalo</h4>
+                        <p class="pub-authors"><strong>Khan SH</strong>, Fatima M, Shah NA</p>
+                        <p class="pub-journal">Theriogenology</p>
+                        <a href="#" class="pub-link">Read More <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <span class="pub-year">2023</span>
+                    <div class="pub-content">
+                        <h4>Genetic diversity analysis of Pakistani goat breeds using microsatellite markers</h4>
+                        <p class="pub-authors">Rehman AU, <strong>Khan SH</strong>, Hussain T</p>
+                        <p class="pub-journal">Animal Genetics</p>
+                        <a href="#" class="pub-link">Read More <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Preview -->
+    <section class="section team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Team</span>
+                <h2 class="section-title">Meet the Researchers</h2>
+                <a href="pages/members.html" class="section-link">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="team-preview-grid">
+                <div class="team-card team-card-highlight">
+                    <img src="images/pi-placeholder.jpg" alt="Dr. Sher Hayat Khan" class="team-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23334155%22 width=%22100%22 height=%22100%22 rx=%2250%22/><text x=%2250%22 y=%2255%22 fill=%22white%22 text-anchor=%22middle%22 font-size=%2230%22>SK</text></svg>'">
+                    <h4>Dr. Sher Hayat Khan</h4>
+                    <p class="team-role">Principal Investigator</p>
+                    <p class="team-affiliation">Associate Professor</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/member-placeholder.jpg" alt="Team Member" class="team-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23334155%22 width=%22100%22 height=%22100%22 rx=%2250%22/><text x=%2250%22 y=%2255%22 fill=%22white%22 text-anchor=%22middle%22 font-size=%2230%22>TM</text></svg>'">
+                    <h4>Dr. Name</h4>
+                    <p class="team-role">Professor</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/member-placeholder.jpg" alt="Team Member" class="team-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23334155%22 width=%22100%22 height=%22100%22 rx=%2250%22/><text x=%2250%22 y=%2255%22 fill=%22white%22 text-anchor=%22middle%22 font-size=%2230%22>TM</text></svg>'">
+                    <h4>Student Name</h4>
+                    <p class="team-role">PhD Student</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/member-placeholder.jpg" alt="Team Member" class="team-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23334155%22 width=%22100%22 height=%22100%22 rx=%2250%22/><text x=%2250%22 y=%2255%22 fill=%22white%22 text-anchor=%22middle%22 font-size=%2230%22>TM</text></svg>'">
+                    <h4>Student Name</h4>
+                    <p class="team-role">MS Student</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates -->
+    <section class="section news-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Updates</span>
+                <h2 class="section-title">Latest News</h2>
+                <a href="pages/news.html" class="section-link">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="news-grid">
+                <div class="news-card news-featured">
+                    <span class="news-date">March 2026</span>
+                    <h3>New Research Grant Awarded</h3>
+                    <p>Our lab received funding for a new project on climate-resilient livestock breeding.</p>
+                    <a href="pages/news.html" class="news-link">Read More</a>
+                </div>
+                <div class="news-card">
+                    <span class="news-date">February 2026</span>
+                    <h3>Paper Published in High-Impact Journal</h3>
+                    <p>Congratulations to the team for our latest publication in Animal Genetics.</p>
+                    <a href="pages/news.html" class="news-link">Read More</a>
+                </div>
+                <div class="news-card">
+                    <span class="news-date">January 2026</span>
+                    <h3>New Equipment Arrived</h3>
+                    <p>State-of-the-art qPCR machine now operational in the lab.</p>
+                    <a href="pages/news.html" class="news-link">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in Collaboration?</h2>
+                <p>We're always open to partnerships, collaborations, and inquiries from researchers and organizations.</p>
+                <a href="pages/contact.html" class="btn btn-primary btn-large">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Animal Biotechnology Lab</h4>
+                    <p>University of Agriculture Peshawar</p>
+                    <p>Khyber Pakhtunkhwa, Pakistan</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-researchgate"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/research-ongoing.html">Research</a></li>
+                        <li><a href="pages/publications.html">Publications</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/inventory.html">Inventory</a></li>
+                        <li><a href="pages/protocols.html">Protocols</a></li>
+                        <li><a href="pages/gallery.html">Gallery</a></li>
+                        <li><a href="pages/news.html">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> sherkhan@uap.edu.pk</li>
+                        <li><i class="fas fa-phone"></i> +92-XXX-XXXXXXX</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Department of Animal Sciences</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Animal Biotechnology Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
