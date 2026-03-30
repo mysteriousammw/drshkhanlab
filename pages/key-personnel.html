@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Personnel | Animal Biotechnology Lab</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="../images/logo.png" alt="Lab Logo" class="nav-logo" onerror="this.style.display='none'">
+                <div class="nav-brand-text">
+                    <span class="nav-lab-name">Animal Biotechnology Lab</span>
+                    <span class="nav-pi-name">Dr. Sher Hayat Khan</span>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">People <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="key-personnel.html">Key Personnel</a></li>
+                        <li><a href="members.html">All Members</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Research <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="research-ongoing.html">Ongoing Research</a></li>
+                        <li><a href="research-completed.html">Completed Research</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html">Publications</a></li>
+                <li class="dropdown">
+                    <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="inventory.html">Inventory</a></li>
+                        <li><a href="protocols.html">Protocols</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-search"><button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button></div>
+        </div>
+    </nav>
+
+    <div class="search-modal" id="searchModal">
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+            <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Key Personnel</h1>
+            <p class="page-subtitle">The leadership team driving our research mission</p>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header"><span class="section-tag">Leadership</span></div>
+            <div class="content-grid" style="max-width: 900px; margin: 0 auto;">
+                <div class="content-card" style="text-align: center; padding: 40px;">
+                    <img src="../images/Dr. Sher Hayat.jpeg" alt="Dr. Sher Hayat Khan" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent); margin-bottom: 24px; box-shadow: 0 0 40px rgba(0,180,216,0.3);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Dr. Sher Hayat Khan</h3>
+                    <p style="color: var(--accent); font-size: 1rem; margin-bottom: 8px;">Principal Investigator & Associate Professor</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">Institute of Biotechnology and Genetic Engineering<br>University of Agriculture Peshawar, Pakistan</p>
+                    <div style="display: flex; gap: 20px; justify-content: center; margin-bottom: 24px; flex-wrap: wrap;">
+                        <a href="mailto:drshkhan@aup.edu.pk" style="color: var(--accent);"><i class="fas fa-envelope"></i> <span style="font-size: 0.9rem;">drshkhan@aup.edu.pk</span></a>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; max-width: 700px; margin: 0 auto 24px;">
+                        Dr. Sher Hayat Khan is an Associate Professor at the Institute of Biotechnology and Genetic Engineering, University of Agriculture Peshawar. He specializes in molecular genetics, reproductive biotechnology, and genetic improvement of livestock. His research focuses on gene identification and characterization, embryo biotechnology, conservation genetics, and developing innovative solutions for challenges in animal agriculture and biodiversity conservation in Pakistan.
+                    </p>
+                    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://scholar.google.com/citations?user=rn4fQmsAAAAJ&hl=en" target="_blank" rel="noopener" style="color: var(--accent);" title="Google Scholar"><i class="fas fa-graduation-cap" style="font-size: 1.5rem;"></i></a>
+                        <a href="https://www.researchgate.net/profile/Sher-Khan-15" target="_blank" rel="noopener" style="color: var(--accent);" title="ResearchGate"><i class="fab fa-researchgate" style="font-size: 1.5rem;"></i></a>
+                        <a href="https://orcid.org/0000-0002-1547-9718" target="_blank" rel="noopener" style="color: var(--accent);" title="ORCID"><i class="fab fa-orcid" style="font-size: 1.5rem;"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 60px;"><span class="section-tag">Research Interests</span></div>
+            <div class="research-grid" style="max-width: 1000px; margin: 0 auto;">
+                <div class="research-card">
+                    <div class="research-icon"><i class="fas fa-dna"></i></div>
+                    <h3>Molecular Genetics</h3>
+                    <p>Gene identification, characterization, and utilization for genetic improvement of livestock breeds.</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Neurodegenerative Diseases</h3>
+                    <p>Research on molecular mechanisms, biomarkers, and therapeutic strategies for disorders such as Alzheimer's, Prion's and Parkinson's disease..</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon"><i class="fas fa-vial-virus"></i></div>
+                    <h3>Genetic Engineering</h3>
+                    <p>Developing genetic strategies for enhanced productivity and disease resistance.</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon"><i class="fas fa-frog"></i></div>
+                    <h3>Animal Biotechnology</h3>
+                    <p>Use of animal models for disease research, regenerative medicine, and biotechnological advancements.</p>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 60px;"><span class="section-tag">Experience</span></div>
+            <div class="content-grid" style="max-width: 800px; margin: 0 auto;">
+                <div class="content-card">
+                    <div style="display: flex; gap: 20px; align-items: flex-start;">
+                        <div style="width: 60px; height: 60px; background: rgba(0,180,216,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fas fa-university" style="color: var(--accent); font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 4px;">Associate Professor</h4>
+                            <p style="color: var(--accent); font-size: 0.85rem; margin-bottom: 8px;">University of Agriculture Peshawar</p>
+                            <p style="color: var(--text-muted); font-size: 0.8rem;">Current Position</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div style="display: flex; gap: 20px; align-items: flex-start;">
+                        <div style="width: 60px; height: 60px; background: rgba(0,180,216,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fas fa-book" style="color: var(--accent); font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 4px;">PhD</h4>
+                            <p style="color: var(--accent); font-size: 0.85rem; margin-bottom: 8px;">China Agricultural University Beijing, China</p>
+                            <p style="color: var(--text-muted); font-size: 0.8rem;">National TSE Lab</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Animal Biotechnology Lab</h4>
+                    <p>University of Agriculture Peshawar</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-researchgate"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="research-ongoing.html">Research</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> drshkhan@aup.edu.pk</li>
+                        <li><i class="fas fa-phone"></i> +92-XXX-XXXXXXX</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Animal Biotechnology Lab. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
