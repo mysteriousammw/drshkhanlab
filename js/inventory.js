@@ -12,7 +12,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const chemCountEl = document.getElementById('chemCount');
     const consCountEl = document.getElementById('consCount');
 
-    // Initialize
+    // Store original card order for re-sorting
+    let originalChemCards = [];
+    let originalConsCards = [];
+
+    // Store original card order on load
+    if (chemicalsGrid) {
+        originalChemCards = Array.from(chemicalsGrid.querySelectorAll('.inventory-card'));
+    }
+    if (consumablesGrid) {
+        originalConsCards = Array.from(consumablesGrid.querySelectorAll('.inventory-card'));
+    }
+
+    // Initialize event listeners
     if (inventorySearch) {
         inventorySearch.addEventListener('input', filterInventory);
     }
@@ -27,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function filterInventory() {
-        const searchTerm = inventorySearch ? inventorySearch.value.toLowerCase() : '';
+        const searchTerm = inventorySearch ? inventorySearch.value.toLowerCase().trim() : '';
         const typeValue = typeFilter ? typeFilter.value : 'all';
         const projectValue = projectFilter ? projectFilter.value.toLowerCase() : 'all';
         const sortValue = sortSelect ? sortSelect.value : 'name-asc';
@@ -40,30 +52,33 @@ document.addEventListener('DOMContentLoaded', function() {
             const chemCards = chemicalsGrid.querySelectorAll('.inventory-card');
             chemCards.forEach(card => {
                 const cardType = card.dataset.type;
-                const cardProject = card.dataset.project;
-                const cardName = card.dataset.name;
-                const cardManufacturer = card.dataset.manufacturer;
+                const cardProject = (card.dataset.project || '').toLowerCase();
+                const cardName = (card.dataset.name || '').toLowerCase();
+                const cardManufacturer = (card.dataset.manufacturer || '').toLowerCase();
 
-                // Check type filter
-                if (typeValue !== 'all' && typeValue !== 'chemical') {
-                    card.classList.add('hidden');
-                    return;
+                let shouldHide = false;
+
+                // Check type filter - only hide if type is specified and doesn't match
+                if (typeValue === 'consumable') {
+                    shouldHide = true;
                 }
 
                 // Check project filter
-                if (projectValue !== 'all' && cardProject !== projectValue) {
-                    card.classList.add('hidden');
-                    return;
+                if (!shouldHide && projectValue !== 'all' && cardProject !== projectValue) {
+                    shouldHide = true;
                 }
 
                 // Check search term
-                if (searchTerm && !cardName.includes(searchTerm) && !cardManufacturer.includes(searchTerm)) {
-                    card.classList.add('hidden');
-                    return;
+                if (!shouldHide && searchTerm && !cardName.includes(searchTerm) && !cardManufacturer.includes(searchTerm)) {
+                    shouldHide = true;
                 }
 
-                card.classList.remove('hidden');
-                visibleChemicals++;
+                if (shouldHide) {
+                    card.classList.add('hidden');
+                } else {
+                    card.classList.remove('hidden');
+                    visibleChemicals++;
+                }
             });
 
             // Sort chemicals
@@ -75,29 +90,32 @@ document.addEventListener('DOMContentLoaded', function() {
             const consCards = consumablesGrid.querySelectorAll('.inventory-card');
             consCards.forEach(card => {
                 const cardType = card.dataset.type;
-                const cardProject = card.dataset.project;
-                const cardName = card.dataset.name;
+                const cardProject = (card.dataset.project || '').toLowerCase();
+                const cardName = (card.dataset.name || '').toLowerCase();
+
+                let shouldHide = false;
 
                 // Check type filter
-                if (typeValue !== 'all' && typeValue !== 'consumable') {
-                    card.classList.add('hidden');
-                    return;
+                if (typeValue === 'chemical') {
+                    shouldHide = true;
                 }
 
                 // Check project filter
-                if (projectValue !== 'all' && cardProject !== projectValue) {
-                    card.classList.add('hidden');
-                    return;
+                if (!shouldHide && projectValue !== 'all' && cardProject !== projectValue) {
+                    shouldHide = true;
                 }
 
                 // Check search term
-                if (searchTerm && !cardName.includes(searchTerm)) {
-                    card.classList.add('hidden');
-                    return;
+                if (!shouldHide && searchTerm && !cardName.includes(searchTerm)) {
+                    shouldHide = true;
                 }
 
-                card.classList.remove('hidden');
-                visibleConsumables++;
+                if (shouldHide) {
+                    card.classList.add('hidden');
+                } else {
+                    card.classList.remove('hidden');
+                    visibleConsumables++;
+                }
             });
 
             // Sort consumables
@@ -121,17 +139,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const hiddenCards = Array.from(grid.querySelectorAll('.inventory-card.hidden'));
 
         cards.sort((a, b) => {
+            const nameA = (a.dataset.name || '').toLowerCase();
+            const nameB = (b.dataset.name || '').toLowerCase();
+            const projA = (a.dataset.project || '').toLowerCase();
+            const projB = (b.dataset.project || '').toLowerCase();
+
             if (sortValue === 'name-asc') {
-                return a.dataset.name.localeCompare(b.dataset.name);
+                return nameA.localeCompare(nameB);
             } else if (sortValue === 'name-desc') {
-                return b.dataset.name.localeCompare(a.dataset.name);
+                return nameB.localeCompare(nameA);
             } else if (sortValue === 'project') {
-                return a.dataset.project.localeCompare(b.dataset.project);
+                return projA.localeCompare(projB);
             }
             return 0;
         });
 
-        // Re-append sorted cards
+        // Re-append sorted visible cards
         cards.forEach(card => grid.appendChild(card));
         // Re-append hidden cards at end
         hiddenCards.forEach(card => grid.appendChild(card));
