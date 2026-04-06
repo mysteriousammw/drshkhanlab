@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const projectValue = projectFilter ? projectFilter.value.toLowerCase() : 'all';
         const sortValue = sortSelect ? sortSelect.value : 'name-asc';
 
+        console.log('Filter triggered:', { searchTerm, typeValue, projectValue, sortValue });
+
         let visibleChemicals = 0;
         let visibleConsumables = 0;
 
@@ -125,6 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update counts
         if (chemCountEl) chemCountEl.textContent = visibleChemicals;
         if (consCountEl) consCountEl.textContent = visibleConsumables;
+
+        console.log('Results:', { visibleChemicals, visibleConsumables });
 
         // Show no results message if needed
         if (visibleChemicals === 0 && visibleConsumables === 0) {
